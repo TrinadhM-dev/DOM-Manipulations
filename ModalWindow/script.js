@@ -21,7 +21,16 @@ for(let i=0;i<=btnsOpenModal.length;i++)
 
     btnsCloseModal.addEventListener('click',closedPopup);
     overlay.addEventListener('click',closedPopup);
+    document.addEventListener('keydown',function(e){
+        console.log(e);
+        if(e.keyCode === 27){
+           if(!modal.classList.contains('hidden')){
+            modal.classList.add('hidden');
+            overlay.classList.add('hidden');
+           }
+        }
+    })
+    
 }
 
-  
 
